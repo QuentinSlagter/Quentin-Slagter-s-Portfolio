@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script src="https://kit.fontawesome.com/074aa40845.js" crossorigin="anonymous"></script>
+  <title>Contact Form</title>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="form-container contact-me-container">
+      <form action="#" class="form" id="form">
+        <h1>Contact Me</h1>
+        <div class="form-control">
+          <input type="text" placeholder="Full Name" id="fullName" />
+            <i class="far fa-check-circle"></i>
+            <i class="far fa-exclamation-circle"></i>
+            <small>Error Message</small>
+
+        <div class="form-control">
+          <input type="email" placeholder="Email" id="email" />
+            <i class="far fa-check-circle"></i>
+            <i class="far fa-exclamation-circle"></i>
+            <small>Error Message</small>
+        </div>
+
+        <div class="form-control">
+          <input type="text" placeholder="Message" id="message" />
+            <i class="far fa-check-circle"></i>
+            <i class="far fa-exclamation-circle"></i>
+            <small>Error Message</small>
+        </div>
+
+          <h2>If you would like to meet in person, please select an available time below.</h2>
+
+        <div class="form-control">
+          <input type="date" placeholder="Time" id="time" />
+            <i class="far fa-check-circle"></i>
+            <i class="far fa-exclamation-circle"></i>
+            <small>Error Message</small>
+        </div>
+        </div>
+        <button type="submit" class="send">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

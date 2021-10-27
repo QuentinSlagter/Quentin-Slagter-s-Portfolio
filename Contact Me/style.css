@@ -1,0 +1,117 @@
+/* Default Parameters */
+
+* {
+  box-sizing: border-box;
+}
+
+/* html format modification */
+
+body { 
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(to left, #2baaff, #fff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: -20px 0 50px;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+#message {
+  min-height: 75px;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+/* Container Modifications */
+
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  width: 768px;
+  max-width: 100%;
+  min-height: 550px;
+}
+
+.form-container form {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 100px;
+  height: 100%;
+}
+
+.form-container input {
+  background: #eee;
+  padding: 12px 15px;
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+/* Button Modifications */
+
+button {
+  border-radius: 20px;
+  border: 2px solid #2baaff;
+  background: #2baaff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1pm;
+  text-transform: uppercase;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Success And Failure Inputs */
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control.success input {
+  border-color: solid #14af00;
+}
+
+.form-control.error input {
+  border-color: solid #ff0000;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: center;
+}
