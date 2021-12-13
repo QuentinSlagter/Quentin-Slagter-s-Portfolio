@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <script src="main.js" defer></script>
+  <script src="https://kit.fontawesome.com/074aa40845.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <title>Slider Sign In/Sign Up Form</title>
 </head>
@@ -18,7 +19,7 @@
 
   <div class="container" id="container">
     <div class="form-container sign-up-container">
-      <form action="#" id="signUpForm">
+      <form class="form" id="signUpForm">
         <h1>Create Account</h1>
         <div class="social-container">
           <a href="https://www.facebook.com/" class="social">
@@ -28,23 +29,42 @@
             <img class="img-google" src="../images/Google Icon.jpg" alt="Google Icon">
           </a>
         </div>
-        <span>or use your email for registration</span>
-        <div class="form-control">
-          <input type="text" placeholder="Name" id="userName" />
-            <small>Error Message</small>
-          <input type="email" placeholder="Email" id="email" />
-            <small>Error Message</small>
-          <input type="password" placeholder="Password" id="password" />
-            <small>Error Message</small>
-          <input type="password" placeholder="Confirm Password" id="confirmPassword" />
-            <small>Error Message</small>
+        <div class="form-grid">
+          <div class="form-control">
+            <label for="userName">Username</label>
+            <input type="text" placeholder="Carol Danvers" id="userName" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+              <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" placeholder="danvers@gmail.com" id="email" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+              <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" placeholder="captainMarvel!" id="password" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+              <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <label for="passwordConfirmation">Confirm Password</label>
+            <input type="password" placeholder="captainMarvel!" id="confirmPassword" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+              <small>Error Message</small>
+          </div>
         </div>
         <button type="submit" class="real" id="realSignUp">Sign Up</button>
       </form>
     </div>
 
     <div class="form-container sign-in-container">
-      <form action="#" id="signInForm">
+      <form class="form" id="signInForm">
         <h1>Sign In</h1>
         <div class="social-container">
           <a href="https://www.facebook.com/" class="social">
@@ -54,40 +74,84 @@
             <img class="img-google" src="../images/Google Icon.jpg" alt="Google Icon">
           </a>
         </div>
-        <span>or use your account</span>
         <div class="form-control">
-          <input type="email" placeholder="Email" id="email" />
-            <small>Error Message</small>
-          <input type="password" placeholder="Password" id="password" />
-            <small>Error Message</small>
+          <label for="email">Email</label>
+          <input type="email" placeholder="danvers@gmail.com" id="existingEmail" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
         </div>
-        <a href="#">Forgot your password?</a>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" placeholder="captainMarvel!" id="existingPassword" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
         <button type="submit" class="real" id="realSignIn">Sign In</button>
       </form>
     </div>
-
+    
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
           <img class="img-bvm" src="../images/bvm.jpg" alt="BVM Icon">
-          <h1>Welcome Back!</h1>
+          <h1>Welcome to the Company!</h1>
           <p>
-            To keep connected with us, please login with your personal info.
+            Please create an account with your personal info.
           </p>
           <button class="ghost" id="signIn">Sign In</button>
+          <div class="dropdown" data-dropdown>
+            <button class="passwordGenerator" data-dropdown-button>Password Generator</button>
+            <div class="dropdown-menu">
+              <button class="closePasswordGenerator"><i class="far fa-times-circle fa-2x"></i></button>
+              <div class="result">
+                <div class="result__title field-title">Generated Password</div>
+                <div class="result__info right">click to copy</div>
+                <div class="result__info left">copied</div>
+                <div class="result__viewbox" id="result">CLICK GENERATE</div>
+                <button id="copy-btn" style="--x: 0; --y: 0"><i class="far fa-copy"></i></button>
+              </div>
+              <div class="length range__slider" data-min="4" data-max="26">
+                <div class="length__title field-title" data-length='0'>length:</div>
+                <input id="slider" type="range" min="4" max="26" value="13" />
+              </div>
+            
+              <div class="settings">
+                <span class="settings__title field-title">settings</span>
+                <div class="setting">
+                  <input type="checkbox" id="uppercase" checked />
+                  <label for="uppercase">Include Uppercase</label>
+                </div>
+                <div class="setting">
+                  <input type="checkbox" id="lowercase" checked />
+                  <label for="lowercase">Include Lowercase</label>
+                </div>
+                <div class="setting">
+                  <input type="checkbox" id="number" checked />
+                  <label for="number">Include Numbers</label>
+                </div>
+                <div class="setting">
+                  <input type="checkbox" id="symbol" />
+                  <label for="symbol">Include Symbols</label>
+                </div>
+              </div>
+            
+              <button class="btn generate" id="generate">Generate Password</button>
+            </div>
+          </div>
         </div>
         
         <div class="overlay-panel overlay-right">
           <img class="img-bvm" src="../images/bvm.jpg" alt="BVM Icon">
-          <h1>Hello, friend!</h1>
+          <h1>Have a Good Day at Work!</h1>
           <p>
-            Enter your personal details and start your journey with us.
+            If you are just starting your journey with us, please click the sign-up button below.
           </p>
           <button class="ghost" id="signUp">Sign Up</button>
+          <a href="#" class="forgot">Forgot your password?</a>
         </div>
       </div>
     </div>
-
-    <script src="main.js"></script>
 </body>
 </html>

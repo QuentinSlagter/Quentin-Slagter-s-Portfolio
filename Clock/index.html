@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="main.js" defer></script>
+  <script src="https://kit.fontawesome.com/074aa40845.js" crossorigin="anonymous"></script>
+  <title>Clock</title>
+</head>
+<body>
+  <div class="clock-wrap">
+  
+    <div class="clock-day">
+      <span class="day">...</span>
+    </div>
+    
+    <div class="clock-date">
+      <span class="date">...</span>
+    </div>
+    
+    <div class="clock-time">
+      <span class="hours">00</span> 
+      <span class="dots">:</span>
+      <span class="minutes">00</span> 
+      <span class="dots">:</span>
+      <span class="seconds">00</span> 
+      <span class="ampm">AM</span>
+    </div>
+    
+    <svg width="100%" height="100%" viewBox="0 0 600 600">
+      <g class="clock-seconds">
+        <circle class="track" cx="300" cy="300" r="280"/>
+        <circle class="path" cx="300" cy="300" r="280"/>
+      </g>
+      <g class="clock-minutes">
+        <circle class="track" cx="300" cy="300" r="260"/>
+        <circle class="path" cx="300" cy="300" r="260"/>
+      </g>
+      <g class="clock-hours">
+        <circle class="track" cx="300" cy="300" r="240"/>
+        <circle class="path" cx="300" cy="300" r="240"/>
+      </g>
+      <g class="clock-markers">
+        <circle class="dots" cx="300" cy="300" r="210"/>
+      </g>
+    </svg>
+    
+  </div>
+</body>
+</html>
