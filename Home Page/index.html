@@ -5,17 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
+  <link rel="shortcut icon" href="../images/TitleIcon.png">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://kit.fontawesome.com/074aa40845.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- LANDING PAGE -->
+  <!-- Primary navigation -->
   <section id="home">
-    <!-- OVERLAY -->
     <div class="overlay">
-      <!-- PRIMARY NAVIGATION -->
       <nav role="navigation">
         <ul class="vertical-list">
           <li><a href="#home">Home</a></li>
@@ -24,11 +25,9 @@
           <li><a href="#contact" >Contact Me</a></li>
         </ul>
       </nav>
-      <!-- END OF PRIMARY NAVIGATION -->
     </div>
-    <!-- END OF OVERLAY -->
   </section>
-  <!-- END OF LANDING PAGE -->
+
   <div class="dropdown" data-dropdown>
     <button class="originallink" data-dropdown-button >
       Menu
@@ -41,19 +40,10 @@
         </div>
       </div>
       <div>
-        <div class="dropdown-heading">Resume</div>
+        <div class="dropdown-heading">Hire Me</div>
         <div class="dropdown-links">
-          <a href="#" class="link">Cover Letter</a>
           <a href="#" class="link">Resume</a>
           <a href="#" class="link">Curriculum Vitae</a>
-          <a href="#" class="link">Letters of Recommendation</a>
-        </div>
-      </div>
-      <div>
-        <div class="dropdown-heading">Skills</div>
-        <div class="dropdown-links">
-          <a href="../Gallery/index.html" class="link">Graphic Illustrator</a>
-          <a href="../Video Production Specialist/index.html" class="link">Video & Production Specialist</a>
         </div>
       </div>
       <div>
@@ -61,48 +51,33 @@
         <div class="dropdown-links">
           <a href="../Project Management/index.html" class="link" target="_blank">Project Management Application</a>
           <a href="../Login/index.html" class="link" target="_blank">Security Login Page</a>
-          <a href="#" class="link">Name 3</a>
+          <a href="../Gallery/index.html" class="link">Art Gallery</a>
+          <a href="../Video Production Specialist/index.html" class="link">Video Production</a>
         </div>
       </div>
     </div>
   </div>
 <section>
 
-  <!-- ABOUT -->
+<!-- End of primary navigation -->
+
+  <!-- About Me -->
   <section id="about">
-    <!-- CONTAINER -->
     <div class="bigContainer">
-      <h1>
-        <span class="logo">~ Web Developer ~
-        </span>
-      </h1>
       <div class="row info">
         <div class="little-about-me">
           <h2>
             <span class="signature">Quentin Slagter</span>
           </h2>
           <p>
-            For the last year, I have been immersed in learning how to code. 
-            <br>
-            I am a <b class="highlight">life-long learner</b> and that will always be a passion of mine. 
-            <br>  
-            In the future, I only see myself improving my skill set in new and existing programing languages, bringing my <b class="highlight">expertise to the work place.</b> 
+            I am a <b class="highlight">web developer </b>, who loves being immersed in coding. I am a <b class="highlight">life-long learner</b> and enjoy situations where I can be a <b class="highlight">creative problem solver.</b> I am <b class="highlight">available for work</b> and exited to bring my expertise to the work place. 
           </p>
           <nav>
-            <div class="linkedIn">
-              <a href="#" class="fab fa-linkedin fa-5x"></a>
-            </div>
             <div class="hireMe">
-              <a href="#contact">Hire Me</a>
-            </div>
-            <div class="github">
-              <a href="#" class="fab fa-github fa-5x"></a>
-            </div>
-            <div class="coverLetter">
-              <a href="#">Cover Letter</a>
+              <a href="#contact"><i class="far fa-handshake"></i> Hire Me</a>
             </div>
             <div class="resume">
-              <a href="#">Resume</a>
+              <a href="#"><i class="far fa-address-card"></i> Resume</a>
             </div>
             <div class="cv">
               <a href="#">Curriculum Vitae</a>
@@ -110,16 +85,12 @@
           </nav>
           <div id="skill-set">
             <h3>Skills</h3>
-            <ul class="vertical-list">
-              <li>
-                <ul class="vertical-list skills" id="web-development-skills">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>SQL</li>
-                  <li>PHP</li>
-                </ul>
-              </li>
+            <ul class="tools vertical-list" id="web-development-skills">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>PHP</li>
             </ul>
           </div>
         </div>
@@ -129,267 +100,257 @@
         </div>
       </div>
     </div>
-    <!-- END OF CONTAINER -->
   </section>
-  <!-- END OF ABOUT -->
+  <!-- End of About me -->
 
-  <!-- PORTFOLIO -->
+  <!-- Portfolio -->
   <section id="portfolio">
-    
-        <!-- CONTAINER -->
-        <div class="bigContainer">
-          <h2>Portfolio Projects</h2>
-        </div>
-        <!-- END OF CONTAINER -->
-        
-        <div class="bigContainer">
-          <section>
-              <!-- OVERLAY -->
-              <div class="overlay">
-                <!-- DESCRIPTION -->
-                <a href="../Project Management/index.html" target="_blank">
-                  <div class="description">
-                    <h4 class="heading">Project Management Application</h4>
-                    <p>
-                      This is an issue-tracking tool that lets you capture the following details... 
-                      <ul>
-                        <li class="listDescription">Tracks what needs to be fixed in a project</li> 
-                        <li class="listDescription">Tracks what you want to add to a project</li>
-                        <li class="listDescription">Tracks who you want to assign to the project</li>
-                        <li class="listDescription">Tracks when you need the project fixed by</li>
-                      </ul>
-                    </p>
-                    
-                    <h6>Tools</h6>
-                    <ul class="tools vertical-list">
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                    </ul>
-                  </div>
-                  <!-- END OF DESCRIPTION -->
-                  
-                  <img src="../images/Project 1.png" alt="Project 1">
+    <div class="bigContainer">
+      <h2>Portfolio Projects</h2>
+    </div>
+
+    <!-- First project -->
+    <div class="bigContainer">
+        <section>
+            <div class="overlay">
+              <!-- Project description -->
+                <div class="description">
                   <h4 class="heading">Project Management Application</h4>
-                </div>
-              </a>
-              <!-- END OF OVERLAY -->
-            </section>
-            <!-- END OF SECTION -->
-
-            <section>
-              <!-- OVERLAY -->
-              <div class="overlay">
-                <!-- DESCRIPTION -->
-                <a href="../Login/index.html" target="_blank">
-                  <div class="description">
-                    <h4 class="heading">Security Login Page</h4>
-                    <p>
-                      This allows users to do the following details... 
-                      <ul>
-                        <li class="listDescription">Sign in as an existing user</li> 
-                        <li class="listDescription">To sign up as a new user</li>
-                        <li class="listDescription">Informs users when fields have been incorrectly completed and will explain how to fix it</li>
-                        <li class="listDescription">Generates new passwords if requested</li>
-                        <li class="listDescription">Allows users to change their password if forgotten</li>
-                      </ul>
-                    </p>
-                    
-                    <h6>Tools</h6>
-                    <ul class="tools vertical-list">
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
+                  <p>
+                    This is an issue-tracking tool that lets you capture the following details... 
+                    <ul>
+                      <li class="listDescription">Tracks what needs to be fixed in a project</li> 
+                      <li class="listDescription">Tracks what you want to add to a project</li>
+                      <li class="listDescription">Tracks who you want to assign to the project</li>
+                      <li class="listDescription">Tracks when you need the project fixed by</li>
                     </ul>
-                  </div>
-                  <!-- END OF DESCRIPTION -->
+                  </p>
                   
-                  <img src="../images/Project 2.png" alt="Project 2">
+                  <h6>Tools</h6>
+                  <ul class="tools vertical-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <h6>Links</h6>
+                  <ul class="links vertical-list">
+                    <a href="../Project Management/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
+                  </ul>
+                </div>
+                <!-- End of description -->
+                
+                <!-- Project snapshot -->
+                <img src="../images/Project 1.png" alt="Project 1">
+                <h4 class="heading" id="overlay-heading">Project Management Application</h4>
+              </div>
+            <!-- End of snapshot -->
+          </section>
+          <!-- End of first project -->
+
+          <!-- Second project -->
+          <section>
+            <div class="overlay">
+              <!-- Project description -->
+              <a href="../Login/index.html" target="_blank">
+                <div class="description">
                   <h4 class="heading">Security Login Page</h4>
-                </div>
-              </a>
-                <!-- END OF OVERLAY -->
-            </section>
-            <!-- END OF SECTION -->
-          
-            <!-- SECTION -->
-            <section>
-              <!-- OVERLAY -->
-              <div class="overlay">
-                <!-- DESCRIPTION -->
-                <a href="../Gallery/index.html" target="_blank">
-                  <div class="description">
-                    <h4 class="heading">Art Gallery</h4>
-                    <p>
-                      <b class="highlight">Creative and detail-oriented</b> graphic designer with exceptional skill level and experience in various digital mediums. Highly adept with programs in Procreate.
-                      <br>
-                      This gallery is a summary that adequately shows my experience in specific software applications as well as relevant design disciplines.
-                    </p>
-                    
-                    <h6>Tools</h6>
-                    <ul class="tools vertical-list">
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>Procreate</li>
+                  <p>
+                    This allows users to do the following details... 
+                    <ul>
+                      <li class="listDescription">Sign in as an existing user</li> 
+                      <li class="listDescription">To sign up as a new user</li>
+                      <li class="listDescription">Informs users when fields have been incorrectly completed and will explain how to fix it</li>
+                      <li class="listDescription">Generates new passwords if requested</li>
+                      <li class="listDescription">Allows users to change their password if forgotten</li>
                     </ul>
-                  </div>
-                  <!-- END OF DESCRIPTION -->
+                  </p>
                   
-                  <img src="../images/Project 3.png" alt="Project 3">
+                  <h6>Tools</h6>
+                  <ul class="tools vertical-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                  <h6>Links</h6>
+                  <ul class="links vertical-list">
+                    <a href="../Login/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
+                  </ul>
+                </div>
+                <!-- End of project description -->
+                
+                <!-- Project snapshot -->
+                <img src="../images/Project 2.png" alt="Project 2">
+                <h4 class="heading" id="overlay-heading">Security Login Page</h4>
+              </div>
+            </a>
+              <!-- End of project snapshot -->
+          </section>
+          <!-- End of second project -->
+        
+          <!-- Third project -->
+          <section>
+            <div class="overlay">
+              <!-- Project description -->
+                <div class="description">
                   <h4 class="heading">Art Gallery</h4>
-                </div>
-              </a>
-              <!-- END OF OVERLAY -->
-            </section>
-            <!-- END OF SECTION -->
-
-          <!-- COLUMN 3 -->
-            <!-- SECTION -->
-            <section>
-              <!-- OVERLAY -->
-              <div class="overlay">
-                <!-- DESCRIPTION -->
-                <a href="../Video Production Specialist/index.html" target="_blank">
-                  <div class="description">
-                    <h4 class="heading">Video Production Gallery</h4>
-                    <p>
-                      <b class="highlight">Organized</b> video production specialist with vast experience with programs involving the production, the recording, and the editing of videos.
-                      <br>
-                      This gallery is a summary that adequately shows my experience in taking an idea and following through its completion.
-                    </p>
-                    
-                    <h6>Tools</h6>
-                    <ul class="tools vertical-list">
-                      <li>HTML</li>
-                      <li>CSS</li>
-                      <li>JavaScript</li>
-                      <li>iMovie</li>
-                      <li>Procreate</li>
-                    </ul>
-                  </div>
-                  <!-- END OF DESCRIPTION -->
+                  <p>
+                    <b class="highlight">Creative and detail-oriented</b> graphic designer with exceptional skill level and experience in various digital mediums. Highly adept with programs in Procreate.
+                    <br>
+                    This gallery is a summary that adequately shows my experience in specific software applications as well as relevant design disciplines.
+                  </p>
                   
-                  <img src="../images/Project 4.png" alt="Project 4">
-                  <h4 class="heading">Video Production Gallery</h4>
+                  <h6>Tools</h6>
+                  <ul class="tools vertical-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Procreate</li>
+                  </ul>
+                  <h6>Links</h6>
+                  <ul class="links vertical-list">
+                    <a href="../Gallery/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
+                  </ul>
                 </div>
-              </a>
-              <!-- END OF OVERLAY -->
-            </section>
-            <!-- END OF SECTION -->
-        </section>
-        <!-- END OF PORTFOLIO -->
-        </div>
+                <!-- End of project description -->
+                
+                <!-- Project snapshot -->
+                <img src="../images/Project 3.png" alt="Project 3">
+                <h4 class="heading" id="overlay-heading">Art Gallery</h4>
+              </div>
+            <!-- End of project snapshot -->
+          </section>
+          <!-- End of third project -->
 
-  <!-- CONTACT PAGE -->
+          <!-- Forth project -->
+          <section>
+            <div class="overlay">
+              <!-- Project description -->
+                <div class="description">
+                  <h4 class="heading">Video Production Gallery</h4>
+                  <p>
+                    <b class="highlight">Organized</b> video production specialist with vast experience with programs involving the production, the recording, and the editing of videos.
+                    <br>
+                    This gallery is a summary that adequately shows my experience in taking an idea and following through its completion.
+                  </p>
+                  
+                  <h6>Tools</h6>
+                  <ul class="tools vertical-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>iMovie</li>
+                    <li>Procreate</li>
+                  </ul>
+                  <h6>Links</h6>
+                  <ul class="links vertical-list">
+                    <a href="../Video Production Specialist/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
+                  </ul>
+                </div>
+                <!-- End of project description -->
+                
+                <!-- Project snapshot -->
+                <img src="../images/Project 4.png" alt="Project 4">
+                <h4 class="heading" id="overlay-heading">Video Production Gallery</h4>
+              </div>
+            <!-- End of project snapshot -->
+          </section>
+          <!-- End of forth project -->
+    </div>
+  </section>
+  <!-- End of portfolio -->
+
+  <!-- Contact page -->
   <section id="contact">
     <div class="contactMe">
-      <div class="title">
-        <div class="h2">~ Schedule an Interview ~</div>
-      </div>
       <div class="box">
-        <div class="contact form">
-          <div class="h3">Contact Quentin Slagter</div>
-          <form action="https://formspree.io/f/xlezeeya" method="post">
+        <!-- Contact form -->
+        <div class="contact form" id="contact-form">
+          <div class="h3">~ Schedule an Interview ~</div>
+          <form class="form" id="contactForm" action="https://formspree.io/f/xlezeeya" method="post">
             <div class="formBox">
-              <div class="row50">
-                <div class="inputBox">
-                  <span>First Name</span>
-                  <input type="text" placeholder="Carol" name="firstName">
+              <div class="short-inputs">
+                <div class="form-control">
+                  <div class="inputBox">
+                    <span>First Name</span>
+                    <input type="text" placeholder="Carol" name="firstName" id="firstName">
+                    <small>Error Message</small>
+                  </div>
                 </div>
-                <div class="inputBox">
-                  <span>Last Name</span>
-                  <input type="text" placeholder="Danvers" name="lastName">
-                </div>
-              </div>
-  
-              <div class="row50">
-                <div class="inputBox">
-                  <span>Email</span>
-                  <input type="email" placeholder="caroldanvers@gmail.com" name="email">
-                </div>
-                <div class="inputBox">
-                  <span>Mobile Number</span>
-                  <input type="text" placeholder="678-136-7092" name="mobileNumber">
+                <div class="form-control">
+                  <div class="inputBox">
+                    <span>Last Name</span>
+                    <input type="text" placeholder="Danvers" name="lastName" id="lastName">
+                    <small>Error Message</small>
+                  </div>
                 </div>
               </div>
   
-              <div class="row100">
-                <div class="inputBox">
-                  <span>Message</span>
-                  <textarea placeholder="Write your message here..." name="message" id="" cols="30" rows="10"></textarea>
+              <div class="short-inputs">
+                <div class="form-control">
+                  <div class="inputBox">
+                    <span>Email</span>
+                    <input type="email" placeholder="caroldanvers@gmail.com" name="email" id="email">
+                    <small>Error Message</small>
+                  </div>
+                </div>
+                <div class="form-control">
+                  <div class="inputBox">
+                    <span>Mobile Number</span>
+                    <input type="text" placeholder="678-136-7092" name="mobileNumber" id="mobileNumber">
+                    <small>Error Message</small>
+                  </div>
                 </div>
               </div>
   
-              <div class="row150">
+              <div class="long-input">
+                <div class="form-control">
+                  <div class="inputBox">
+                    <span>Message</span>
+                    <textarea placeholder="Write your message here..." name="message" id="message" cols="30" rows="10"></textarea>
+                    <small>Error Message</small>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="submit-button">
                 <div class="inputBox">
-                  <input type="submit" value="Send">
+                  <input type="submit" value="Send" id="contactButton">
+                  <!-- <div class="g-recaptcha" data-sitekey="6Lf5lMIdAAAAAPR_fJH9hzTXDCdF6owUBgqxnwAZ"></div> -->
                 </div>
               </div>
             </div>
           </form>
         </div>
+        <!-- End of contact form -->
+
+        <!-- Contact me directly -->
         <div class="contact info">
           <div class="h3">Contact Info</div>
           <div class="infoBox">
+            <div>
+              <span><a href="#"><i class="fab fa-linkedin"></i></a></span>
+              <p><a href="#">Quentin Slagter</a></p>
+            </div>
             <div>
               <span><i class="fas fa-map-marker-alt"></i></span>
               <p>Waukesha, WI</p>
             </div>
             <div>
-              <span><i class="fas fa-envelope"></i></span>
-              <a href="slagter.quentin@gmail.com"> slagter.quentin@gmail.com</a>
-            </div>
-            <div>
-              <span><i class="fas fa-mobile-alt"></i></span>
-              <a href="tel: 5074560868">507-456-0868</a>
+              <span><a href="tel: 2622780637"><i class="fas fa-mobile-alt"></i></a></span>
+              <a href="tel: 2622780637">262-278-0637</a>
             </div>
           </div>
           <img src="../images/profile.jpg" alt="">
         </div>
+        <!-- End of contact me directly -->
       </div>
     </div>
   </section>
-  <!-- END OF CONTACT PAGE -->
-
-  <!--
-  <div class="homePage">
-    <div class="container">
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h2>Quentin Slagter</h2>
-          <p>Web Developer, Physics Teacher, Graphic Illustrator, & Video Production Specialist!</p>
-          <a href="#">Resume</a>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <img style="--i:1" src="../images/Quentin's Magic.jpg" alt="Profile Picture" class="image">
-    </nav>
-  </div>
-  <div class="homePage">
-    <div class="container">
-      <div class="box">
-        <span></span>
-        <div class="content">
-          <h2>Projects</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <a href="../Login/index.html" target="blank">Most Recent Project</a>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <img style="--i:1" src="../images/Drawing Time.jpg" alt="Profile Picture" class="image">
-    </nav>
-  </div>
-  <div class="homePage">
-    <a href="../Contact Me/index.html" id="interview" target="blank">Schedule an Interview</a>
-    <nav>
-      <img style="--i:1" src="../images/profile.jpg" alt="Profile Picture" class="image">
-    </nav>
-  </div>
-  </div> -->
+  <!-- End of contact page-->
 </section>
 </body>
 </html>
