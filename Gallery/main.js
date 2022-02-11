@@ -12,3 +12,8 @@ document.addEventListener("click", e => {
     dropdown.classList.remove('active')
   })
 })
+
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});

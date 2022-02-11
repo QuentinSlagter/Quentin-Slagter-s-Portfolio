@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="../images/TitleIcon.png">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js" integrity="sha512-qa1o08MA0596eSNsnkRv5vuGloSKUhY09O31MY2OJpODjUVlaL0GOJJcyt7J7Z61FiEgHMgBkH04ZJ+vcuLs/w==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://kit.fontawesome.com/074aa40845.js" crossorigin="anonymous"></script>
@@ -42,17 +43,18 @@
       <div>
         <div class="dropdown-heading">Hire Me</div>
         <div class="dropdown-links">
-          <a href="#" class="link">Resume</a>
-          <a href="#" class="link">Curriculum Vitae</a>
+          <a href="../Papers/QuentinSlagterResume.pdf" class="link" target="_blank">Resume</a>
+          <a href="../Papers/CV.pdf" class="link" target="_blank">Curriculum Vitae</a>
         </div>
       </div>
       <div>
         <div class="dropdown-heading">Projects</div>
         <div class="dropdown-links">
-          <a href="../Project Management/index.html" class="link" target="_blank">Project Management Application</a>
+          <a href="#" class="link" target="_blank">Project Management Application</a>
+          <a href="#" class="link" target="_blank">Blog</a>
+          <a href="#" class="link">Best JavaScript Project</a>
+          <a href="../Gallery/index.html" class="link">Digital Production Gallery</a>
           <a href="../Login/index.html" class="link" target="_blank">Security Login Page</a>
-          <a href="../Gallery/index.html" class="link">Art Gallery</a>
-          <a href="../Video Production Specialist/index.html" class="link">Video Production</a>
         </div>
       </div>
     </div>
@@ -72,17 +74,19 @@
           <p>
             I am a <b class="highlight">web developer </b>, who loves being immersed in coding. I am a <b class="highlight">life-long learner</b> and enjoy situations where I can be a <b class="highlight">creative problem solver.</b> I am <b class="highlight">available for work</b> and exited to bring my expertise to the work place. 
           </p>
-          <nav>
+          <div class="nav">
             <div class="hireMe">
-              <a href="#contact"><i class="far fa-handshake"></i> Hire Me</a>
+              <nav>
+                <a href="#contact"><i class="far fa-handshake"></i> Hire Me</a>
+              </nav>
             </div>
             <div class="resume">
-              <a href="#"><i class="far fa-address-card"></i> Resume</a>
+              <a href="../Papers/QuentinSlagterResume.pdf" target="_blank"><i class="far fa-address-card"></i> Resume</a>
             </div>
             <div class="cv">
-              <a href="#">Curriculum Vitae</a>
+              <a href="../Papers/CV.pdf" target="_blank">Curriculum Vitae</a>
             </div>
-          </nav>
+          </div>
           <div id="skill-set">
             <h3>Skills</h3>
             <ul class="tools vertical-list" id="web-development-skills">
@@ -134,7 +138,7 @@
                   </ul>
                   <h6>Links</h6>
                   <ul class="links vertical-list">
-                    <a href="../Project Management/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="#" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
                     <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
                   </ul>
                 </div>
@@ -152,7 +156,6 @@
           <section>
             <div class="overlay">
               <!-- Project description -->
-              <a href="../Login/index.html" target="_blank">
                 <div class="description">
                   <h4 class="heading">Security Login Page</h4>
                   <p>
@@ -184,7 +187,6 @@
                 <img src="../images/Project 2.png" alt="Project 2">
                 <h4 class="heading" id="overlay-heading">Security Login Page</h4>
               </div>
-            </a>
               <!-- End of project snapshot -->
           </section>
           <!-- End of second project -->
@@ -194,11 +196,9 @@
             <div class="overlay">
               <!-- Project description -->
                 <div class="description">
-                  <h4 class="heading">Art Gallery</h4>
+                  <h4 class="heading">Current JavaScript Project</h4>
                   <p>
-                    <b class="highlight">Creative and detail-oriented</b> graphic designer with exceptional skill level and experience in various digital mediums. Highly adept with programs in Procreate.
-                    <br>
-                    This gallery is a summary that adequately shows my experience in specific software applications as well as relevant design disciplines.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum unde ad animi rem asperiores, iure architecto, quisquam a quod minima ut at sit blanditiis voluptatibus cum quidem reprehenderit eveniet totam.
                   </p>
                   
                   <h6>Tools</h6>
@@ -206,19 +206,18 @@
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
-                    <li>Procreate</li>
                   </ul>
                   <h6>Links</h6>
                   <ul class="links vertical-list">
-                    <a href="../Gallery/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="../diceGame/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
                     <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
                   </ul>
                 </div>
                 <!-- End of project description -->
                 
                 <!-- Project snapshot -->
-                <img src="../images/Project 3.png" alt="Project 3">
-                <h4 class="heading" id="overlay-heading">Art Gallery</h4>
+                <img src="../images/diceGame.png" alt="Project 3">
+                <h4 class="heading" id="overlay-heading">Current JavaScript Project</h4>
               </div>
             <!-- End of project snapshot -->
           </section>
@@ -229,11 +228,11 @@
             <div class="overlay">
               <!-- Project description -->
                 <div class="description">
-                  <h4 class="heading">Video Production Gallery</h4>
+                  <h4 class="heading">Digital Production Gallery</h4>
                   <p>
-                    <b class="highlight">Organized</b> video production specialist with vast experience with programs involving the production, the recording, and the editing of videos.
+                    <b class="highlight">Creative and detail-oriented</b> graphic designer with exceptional skill level and experience in various digital mediums. Highly adept with programs in Procreate and iMovie.
                     <br>
-                    This gallery is a summary that adequately shows my experience in taking an idea and following through its completion.
+                    This gallery is a summary that adequately shows my experience in specific software applications as well as relevant design disciplines.
                   </p>
                   
                   <h6>Tools</h6>
@@ -246,15 +245,15 @@
                   </ul>
                   <h6>Links</h6>
                   <ul class="links vertical-list">
-                    <a href="../Video Production Specialist/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
+                    <a href="../Gallery/index.html" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
                     <a href="#" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
                   </ul>
                 </div>
                 <!-- End of project description -->
                 
                 <!-- Project snapshot -->
-                <img src="../images/Project 4.png" alt="Project 4">
-                <h4 class="heading" id="overlay-heading">Video Production Gallery</h4>
+                <img src="../images/Project 3.png" alt="Project 4">
+                <h4 class="heading" id="overlay-heading">Digital Production Gallery</h4>
               </div>
             <!-- End of project snapshot -->
           </section>

@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drawings</title>
+  <title>Digitial Production Gallery</title>
+  <link rel="shortcut icon" href="../images/brush.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" defer></script>
   <script src="main.js" defer></script>
   <script src="https://kit.fontawesome.com/074aa40845.js" crossorigin="anonymous"></script>
 </head>
@@ -50,26 +56,62 @@
       </div>
     </div>
   </header>
-  <div class="wrapper">
-    <div class="gallery">
-      <span style="--i:1"><picture><source srcset="../images/Warrior.jpg" type="image/jpg"><img src="../images/Warrior.jpg" alt="Barb's Warrior Drawing"></picture></span>
-      <span style="--i:2"><picture><source srcset="../images/Aliens.jpg" type="image/jpg"><img src="../images/Aliens.jpg" alt="Aliens Drawing"></picture></span>
-      <span style="--i:3"><picture><source srcset="../images/Sunset.jpg" type="image/jpg"><img src="../images/Sunset.jpg" alt="Sunset Drawing"></picture></span>
-      <span style="--i:4"><picture><source srcset="../images/Runescape.jpg" type="image/jpg"><img src="../images/Runescape.jpg" alt="Runescape Drawing"></picture></span>
-      <span style="--i:5"><picture><source srcset="../images/Quentin's Magic.jpg" type="image/jpg"><img src="../images/Quentin's Magic.jpg" alt="Quentin's Magic Drawing"></picture></span>
-      <span style="--i:6"><picture><source srcset="../images/Drawing Time.jpg" type="image/jpg"><img src="../images/Drawing Time.jpg" alt="Drawing Time"></picture></span>
-      <span style="--i:7"><picture><source srcset="../images/Newt.jpg" type="image/jpg"><img src="../images/Newt.jpg" alt="Newt Drawing"></picture></span>
-      <span style="--i:8"><picture><source srcset="../images/Viking Cat.jpg" type="image/jpg"><img src="../images/Viking Cat.jpg" alt="Viking Cat Drawing"></picture></span>
-      <!--
-      <span style="--i:9"><picture><source srcset="../images/Waterfall Drawing.jpg" type="image/jpg"><img src="../images/Waterfall.jpg" alt="Waterfall Drawing"></picture></span>
-      <span style="--i:10"><picture><source srcset="../images/Space.jpg" type="image/jpg"><img src="../images/Space.jpg" alt="Space Drawing"></picture></span>
-      <span style="--i:11"><picture><source srcset="../images/Kalle.jpg" type="image/jpg"><img src="../images/Kalle.jpg" alt="Kalle Drawing"></picture></span>
-      <span style="--i:12"><picture><source srcset="../images/Beach.jpg" type="image/jpg"><img src="../images/Beach.jpg" alt="Beach Drawing"></picture></span>
-      <span style="--i:13"><picture><source srcset="../images/Constellations.jpg" type="image/jpg"><img src="../images/Constellations.jpg" alt="Constellations Drawing"></picture></span>
-      <span style="--i:14"><picture><source srcset="../images/Cold.jpg" type="image/jpg"><img src="../images/Cold.jpg" alt="Cold Drawing"></picture></span>
-      <span style="--i:15"><picture><source srcset="../images/Red Dress.jpg" type="image/jpg"><img src="../images/Red Dress.jpg" alt="Red Dress Drawing"></picture></span> -->
+  <h1 class="title">Graphic Design Specialist</h1>
+  <section class="container">
+    <div class="row">
+      <a href="../images/Warrior.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Warrior.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Drawing Time.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Drawing Time.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Newt.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Newt.jpg" class="img-fluid rounded">
+      </a>
     </div>
-    <h1 class="title">Q's Gallery</h1>
-  </div>
+    <div class="row">
+      <a href="../images/Aliens.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Aliens.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Sunset.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Sunset.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Space.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Space.jpg" class="img-fluid rounded">
+      </a>
+    </div>
+    <div class="row">
+      <a href="../images/Quentin's Magic.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Quentin's Magic.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Red Dress.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Red Dress.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Waterfall.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Waterfall.jpg" class="img-fluid rounded">
+      </a>
+    </div>
+    <div class="row">
+      <a href="../images/Runescape.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Runescape.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Viking Cat.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Viking Cat.jpg" class="img-fluid rounded">
+      </a>
+      <a href="../images/Beach.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+        <img src="../images/Beach.jpg" class="img-fluid rounded">
+      </a>
+    </div>
+  </section>
+  <section class="videos">
+    <h1 class="title">Video Production Spectialist</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/liYSXu5Y__Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/m53W4t9hzK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kLc9qqXQqlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cqY0B_veGnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WDlF455B4P4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RdU54FoUJEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BxgH2mVy-ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
 </body>
 </html>

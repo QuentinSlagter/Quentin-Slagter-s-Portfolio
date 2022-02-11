@@ -153,6 +153,7 @@ h6 {
   font-size: 25px;
   cursor: pointer;
   padding: 0 10px;
+  z-index: 100;
 }
 
 .link {
@@ -169,7 +170,7 @@ h6 {
 }
 
 .link:hover {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .dropdown.active > .originallink,
@@ -184,11 +185,15 @@ h6 {
   z-index: 110;
 }
 
+.dropdown-heading {
+  color: #fff;
+}
+
 .dropdown-menu {
   position: absolute;
   right: calc(100% + 0.75rem);
   top: calc(100% + 0.75rem);
-  background-color: white;
+  background-color: #02122e;
   padding: 0.75rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
@@ -266,7 +271,7 @@ h6 {
   color: #03a9f5;
 }
 
-#about .info nav {
+#about .info .nav {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(1, max-content);
@@ -309,6 +314,10 @@ h6 {
 #about .info a:hover {
   background-color: #03a9f5;
   color: white;
+}
+
+#about .hidden {
+  display: none;
 }
 
 #about .signature {
@@ -458,6 +467,7 @@ h6 {
 }
 
 .description .links li:hover {
+  cursor: pointer;
   background-color: #2b99ff;
 }
 
@@ -507,6 +517,7 @@ h6 {
 }
 
 #portfolio section:hover .overlay img {
+  display: none;
 	opacity: 0;
 	transition: opacity .32s;
 }
@@ -714,7 +725,7 @@ h6 {
   width: 65%;
   height: auto;
   border-radius: 8px;
-  max-block-size: ;
+  /* max-block-size: ; */
 }
 
 .form-control {
