@@ -487,7 +487,14 @@ h6 {
   float: left;
 }
 
+/* #portfolio .snapshot {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+} */
+
 #portfolio img {
+  max-width: 300px;
 	width: 100%;
   object-fit: contain;
 }
@@ -498,6 +505,10 @@ h6 {
 }
 
 #portfolio .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   background-color: rgba(4,14,22,.83);
 	position: relative;
 	padding-bottom: 0px;
@@ -523,7 +534,7 @@ h6 {
 }
 
 #portfolio section:hover .description {
-	top: 140px;
+	top: 80px;
 	transition: top .5s;
 }
 
