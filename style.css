@@ -1468,11 +1468,12 @@ h6 {
     #portfolio section .overlay img {
       display: none;
       opacity: 0;
-      transition: opacity .32s;
+      transition: none;
     }
     
     #portfolio section .description {
       top: 0px;
+      transition: none;
     }
     
     #portfolio section .overlay .heading span {
@@ -1485,11 +1486,13 @@ h6 {
     
     #portfolio section .overlay .description > * {
       display: block;
+      transition: none;
     }
     
     #portfolio section .overlay .heading {
       top: 0px;
       margin-bottom: 5px;
+      transition: none;
     }
     }
 
