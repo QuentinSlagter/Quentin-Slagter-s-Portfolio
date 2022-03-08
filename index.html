@@ -140,15 +140,19 @@
                       <li>HTML</li>
                       <li>CSS</li>
                       <li>JavaScript</li>
-                      <li>PHP</li>
+                      <li>PHP</li> 
                       <li>MySQL</li>
                     </ul>
                     <h6>Links</h6>
-                    <ul class="links vertical-list">
-                        <a href="https://power-of-programming.herokuapp.com/admin/admin_index.php" target="_blank"><li>Live Admin Demo <i class="fas fa-link"> </i></li></a>
-                      <form action="includes/logout.php" method="post">
-                        <a href="https://power-of-programming.herokuapp.com/index.php" target="_blank"><li>Live Demo <i class="fas fa-link"> </i></li></a>
-                      </form>
+                    <ul class="horizontal-list vertical-list">
+                      <li><form action="https://power-of-programming.herokuapp.com/login_page.php" method="post" target="_blank">
+                        <input name="username" type="text" class="hidden" value="Admin Guest">
+                        <input name="password" type="password" class="hidden" value="corgi">
+                        <input name="login" value="Live Admin Demo" type="submit">
+                      </form></li>
+                      <li><form action="https://power-of-programming.herokuapp.com/includes/logout.php" method="post" target="_blank">
+                        <input name="logout" value="Live Demo" type="submit">
+                      </form></li>
                       <a href="https://github.com/QuentinSlagter/cms-blog" target="_blank"><li>GitHub <i class="fab fa-github"></i></li></a>
                     </ul>
                   </div>

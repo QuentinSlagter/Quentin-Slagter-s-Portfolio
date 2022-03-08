@@ -380,6 +380,10 @@ h6 {
   align-items: center;
 }
 
+#portfolio .hidden {
+  display: none;
+}
+
 #portfolio .wholeContainer {
   max-width: 1500px;
 }
@@ -481,6 +485,38 @@ h6 {
 .description .links li:hover {
   cursor: pointer;
   background-color: #2b99ff;
+}
+
+.description .horizontal-list li:last-child {
+	margin-top: 10px;
+	background-color: #114190;
+	margin-right: 10px;
+	padding: 10px;
+	color: #F0F0F0;
+}
+
+.description .horizontal-list li:hover:last-child {
+  cursor: pointer;
+  background-color: #2b99ff;
+}
+
+.description input[type="submit"] {
+  align-items: center;
+	margin-top: 10px;
+	background-color: #114190;
+	margin-right: 10px;
+	padding: 15px 10px 15px 10px;
+	color: #F0F0F0;
+  border: none;
+}
+
+.description input:hover {
+  cursor: pointer;
+  background-color: #2b99ff;
+}
+
+.description form {
+  /* display: none; */
 }
 
 #portfolio div section {
