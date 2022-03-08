@@ -419,9 +419,12 @@ h6 {
 	position: relative;
 	top: 0px;
 	left: 0px;
-	padding: 25px;
   font-size: 20px;
 }
+
+#portfolio h4, p, ul, h6 {
+  padding: 0px 25px 0px 25px;
+} 
 
 #portfolio .description > * {
 	display: none;
