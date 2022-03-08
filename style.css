@@ -422,7 +422,7 @@ h6 {
   font-size: 20px;
 }
 
-#portfolio h4, p, ul, h6 {
+#portfolio h4, #portfolio p, #portfolio ul, #portfolio h6 {
   padding: 0px 25px 0px 25px;
 } 
 
