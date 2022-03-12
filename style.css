@@ -322,7 +322,7 @@ h6 {
 }
 
 #about .signature {
-	font-family: cursive;
+	/* font-family: cursive; */
 	font-size: 150%;
 	color: #ffffff;
   padding-right: 20px;
@@ -385,7 +385,7 @@ h6 {
 }
 
 #portfolio .wholeContainer {
-  max-width: 1500px;
+  max-width: 1200px;
 }
 
 /* #portfolio .bigContainer {
@@ -393,7 +393,7 @@ h6 {
 } */
 
 #portfolio h2 {
-  font-family: cursive;
+  /* font-family: cursive; */
   font-size: 400%;
   display: flex;
   justify-content: center;
@@ -485,9 +485,11 @@ h6 {
 	color: #F0F0F0;
 }
 
+@media (hover: hover) {
 .description .links li:hover {
   cursor: pointer;
   background-color: #2b99ff;
+}
 }
 
 .description .horizontal-list li:last-child {
@@ -498,9 +500,11 @@ h6 {
 	color: #F0F0F0;
 }
 
+@media (hover: hover) {
 .description .horizontal-list li:hover:last-child {
   cursor: pointer;
   background-color: #2b99ff;
+}
 }
 
 .description input[type="submit"] {
@@ -513,9 +517,11 @@ h6 {
   border: none;
 }
 
+@media (hover: hover) {
 .description input:hover {
   cursor: pointer;
   background-color: #2b99ff;
+}
 }
 
 #portfolio div section {
@@ -1499,7 +1505,7 @@ h6 {
     overflow-x: hidden;
 	}
 
-  @media (hover: hover) {
+  /* @media (hover: hover) { */
     #portfolio section .overlay img {
       display: none;
       opacity: 0;
@@ -1529,7 +1535,7 @@ h6 {
       margin-bottom: 5px;
       transition: none;
     }
-    }
+    /* } */
 
 .contactMe {
     margin: 75px 0 0 0;
