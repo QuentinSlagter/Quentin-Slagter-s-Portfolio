@@ -1537,6 +1537,52 @@ h6 {
     }
     /* } */
 
+    @media (hover: none) {
+      .description .links li:hover {
+        cursor: pointer;
+        background-color: #2b99ff;
+      }
+
+      .description .horizontal-list li:hover:last-child {
+        cursor: pointer;
+        background-color: #2b99ff;
+      }
+
+      .description input:hover {
+        cursor: pointer;
+        background-color: #2b99ff;
+      }
+
+      #portfolio section:hover .overlay img {
+        display: none;
+        opacity: 0;
+        transition: opacity .32s;
+      }
+      
+      #portfolio section:hover .description {
+        top: 40px;
+        transition: top .5s;
+      }
+      
+      #portfolio section:hover .overlay .heading span {
+        /* -webkit-transform: rotate(180deg); */
+        position: relative;
+        top: -80px;
+        left: -30px;
+        color: rgba(4,14,22,.83);
+      }
+      
+      #portfolio section:hover .overlay .description > * {
+        display: block;
+      }
+      
+      #portfolio section:hover .overlay .heading {
+        position: absolute;
+        top: -60px;
+        transition: top .9s;
+      }
+      }
+
 .contactMe {
     margin: 75px 0 0 0;
   }
