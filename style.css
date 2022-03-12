@@ -1537,7 +1537,7 @@ h6 {
     }
     /* } */
 
-    @media (hover: none) {
+    @media (hover: hover) {
       .description .links li:hover {
         cursor: pointer;
         background-color: #2b99ff;
