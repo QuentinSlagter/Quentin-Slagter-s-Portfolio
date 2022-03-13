@@ -105,6 +105,8 @@ h6 {
 }
 
 #home nav ul {
+  display: flex;
+  justify-content: space-between;
 	overflow: hidden;
 }
 
