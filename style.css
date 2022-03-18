@@ -343,6 +343,7 @@ h6 {
   width: 500px;
   min-height: 400px;
   max-width: 500px;
+  border-radius: 50px;
 }
 
 #portfolio h4, #portfolio p, #portfolio ul, #portfolio h6 {
