@@ -142,90 +142,6 @@ h6 {
 }
 /* End of home navigation bar */
 
-/* Menu Button */
-
-.originallink {
-  position: absolute;
-  right: 0;
-  background: white;
-  border-radius: 15px;
-  border: none;
-  color: #2b99ff;
-  font-family: inherit;
-  font-size: 25px;
-  cursor: pointer;
-  padding: 0 10px;
-  z-index: 100;
-}
-
-.link {
-  position: relative;
-  right: 0;
-  background: none;
-  border: none;
-  text-decoration: none;
-  color: #2b99ff;
-  font-family: inherit;
-  font-size: 17px;
-  cursor: pointer;
-  padding: 0 1rem;
-}
-
-.link:hover {
-  color: rgb(255, 255, 255);
-}
-
-.dropdown.active > .originallink,
-.originallink:hover {
-  color: rgb(0, 0, 0);
-} 
-
-.dropdown {
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
-  z-index: 110;
-}
-
-.dropdown-heading {
-  color: #fff;
-}
-
-.dropdown-menu {
-  position: absolute;
-  right: calc(100% + 0.75rem);
-  top: calc(100% + 0.75rem);
-  background-color: #02122e;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-  z-index: 55;
-}
-
-.dropdown.active > .originallink + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.information-grid {
-  display: grid;
-  grid-template-columns: repeat(1, max-content);
-  gap: 2rem;
-}
-
-.dropdown-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-/* End of Menu Button */
-
 /* About me */
 #about {
   width: 100%;
@@ -417,11 +333,16 @@ h6 {
   letter-spacing: 2px;
 }
 
+/* This was causing the glitch when hovering over the projects */
 #portfolio .description {
 	position: relative;
 	top: 0px;
 	left: 0px;
   font-size: 20px;
+  height: 550px;
+  width: 500px;
+  min-height: 400px;
+  max-width: 500px;
 }
 
 #portfolio h4, #portfolio p, #portfolio ul, #portfolio h6 {
@@ -530,34 +451,52 @@ h6 {
   border-radius: 50px;
 }
 
-#portfolio div:nth-child(odd) section {
-	padding: 10px;
-	border: 20px;
-  float: right;
+#portfolio .snapshot {
+  position: absolute;
 }
-
-#portfolio div:nth-child(even) section {
-	padding: 10px;
-	border: 20px;
-  float: left;
-}
-
-/* #portfolio .snapshot {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-} */
 
 #portfolio img {
-  /* padding: 50px; */
   max-width: 300px;
-	width: 100%;
+	width: 300px;
+  height: 300px;
   object-fit: contain;
 }
 
-#portfolio section {
-	height: 100%;
-  width: 50%;
+#portfolio .bigContainer2 {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(2, max-content);
+  gap: 3rem 3rem;
+  justify-content:center;
+  align-items: center;
+}
+
+#portfolio .fixHover {
+  position: relative;
+  width: 500px;
+  height: 550px;
+}
+
+#portfolio section:nth-child(odd) {
+  position: absolute;
+  grid-column: 1;
+  grid-column-end: 2;
+  height: 550px;
+  width: 500px;
+  min-height: 400px;
+  /* min-width: 500px; */
+  overflow: hidden;
+}
+
+#portfolio section:nth-child(even) {
+  position: absolute;
+  grid-column: 2;
+  grid-column-end: 3;
+  height: 550px;
+  width: 500px;
+  /* min-width: 400px; */
+  min-width: 500px;
+  overflow: hidden;
 }
 
 #portfolio .overlay {
@@ -568,9 +507,11 @@ h6 {
   background-color: rgba(4,14,22,.83);
 	position: relative;
 	padding-bottom: 0px;
-	min-height: 550px;
+  height: 550px;
+  width: 500px;
+	/* min-height: 550px; */
   max-width: 700px;
-  overflow: auto;
+  overflow: hidden;
   border-radius: 50px;
 }
 
@@ -588,30 +529,21 @@ h6 {
 #portfolio section:hover .overlay img {
   display: none;
 	opacity: 0;
-	transition: opacity .32s;
+	/* transition: opacity .32s; */
+}
+
+#portfolio .fixHover:hover {
+  display: block;
 }
 
 #portfolio section:hover .description {
-	top: 40px;
+	position: relative;
+  top: 40px;
 	transition: top .5s;
-}
-
-#portfolio section:hover .overlay .heading span {
-  /* -webkit-transform: rotate(180deg); */
-  position: relative;
-  top: -80px;
-  left: -30px;
-  color: rgba(4,14,22,.83);
 }
 
 #portfolio section:hover .overlay .description > * {
 	display: block;
-}
-
-#portfolio section:hover .overlay .heading {
-	position: absolute;
-	top: -60px;
-	transition: top .9s;
 }
 }
 /* End of portfolio */
@@ -898,49 +830,6 @@ h6 {
     width: 100%;
 		height: auto;
 	}
-
-	/* #portfolio section:hover .overlay .heading span {
-  -webkit-transform: rotate(90deg);
-	 top: 70px;
-	 left: -240px;
-	 position: relative;
-	} */
-}
-
-@media (max-width: 991px) {
-  .contactMe {
-    padding: 20px;
-  }
-  .h2 {
-    font-size: 30px;
-  }
-  .box {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "form"
-    "info"
-    "pictures";
-  }
-  .pictureTriangle {
-    min-height: 300px;
-  }
-  .formBox .short-inputs {
-    display: flex;
-    gap: 0;
-    flex-direction: column;
-  }
-  .inputBox {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  .contact {
-    padding: 30px;
-  }
 }
 
 @media screen and (max-width: 990px) {
@@ -963,6 +852,10 @@ h6 {
     font-size: 11px;
   }
 
+  #home nav {
+    width: 480px;
+  }
+
   .dropdown {
     display: none;
   }
@@ -1020,12 +913,6 @@ h6 {
   }
 
   #about .info nav {
-    /* font-size: 70%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    grid-template-rows: repeat(2, max-content);
-    gap: 2.5rem 0rem; */
     justify-content:center;
     align-items: center;
     text-align: center;
@@ -1091,12 +978,25 @@ h6 {
 
   #portfolio h2 {
     margin: 100px 10px 0 10px;
-    font-size: 200%;
+    font-size: 275%;
   }
 
 	#portfolio .description p {
 		margin-top: 10px;
 	}
+
+  #portfolio .bigContainer2 {
+    grid-template-columns: repeat(1, max-content);
+    grid-template-rows: repeat(4, max-content);
+    padding-top: 15px;
+    gap: 1rem;
+    justify-content:center;
+    align-items: center;
+  }
+
+  /* #portfolio .overlay {
+    max-width: 480px;
+  } */
 
 	#portfolio section {
     width: 100%;
@@ -1139,11 +1039,6 @@ h6 {
 		min-height: auto;
 	}
 
-	/* #portfolio section:hover .overlay .heading {
-	 top: -0px;
-	 color: white;
-	} */
-
 	#portfolio .heading span {
 		display: none;
 	}
@@ -1152,195 +1047,52 @@ h6 {
 		font-size: 200%;
 	}
 
-	#portfolio p, h6 {
+	#portfolio p, h6, ul {
 		text-align: left;
 	}
 
-	#contact textarea {
-		width: 90%;
-	}
   #contact .contactMe {
     max-width: 480px;
   }
+
+  .contactMe {
+    padding: 20px;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "form"
+    "info"
+    "pictures";
+  }
+
+  .formBox .short-inputs {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .contact {
+    padding: 30px;
+  }
+
+  .info img {
+    max-width: 150px;
+  }
 }
+
 @media screen and (max-width: 790px) {
-  body {
-    font-size: 18px;
-		text-align: center;
-	}
-  
-  h2 {
-    margin-top: 80px;
-  }
-
-	input {
-		text-align: center;
-	}
-
-  #about .bigContainer {
-    max-width: 480px;
-  }
-
-	#about img {
-		display: block;
-		margin: 0 auto;
-		width: 30%;
-	}
-	
-	#about .info {
-		flex-direction: column-reverse;
-	}
-
-	#skill-set .skills {
-		margin-top: 10px;
-	}
-
-	form {
-		text-align: left;
-	}
-
-  #portfolio .wholeContainer {
-    max-width: 480px;
-  }
-
-	#portfolio .description p {
-		margin-top: 10px;
-	}
-
-	#portfolio section {
-    width: 100%;
-		font-size: 10px;
-    float: none;
-	}
-
-  #portfolio section img {
-		display: none;
-	}
-
-	#portfolio section {
-		width: 100%;
-	}
-
-  #portfolio .description > *  {
-		display: block;
-	}
-
-	#portfolio .description {
-		display: table-footer-group;
-	}
-
-	#portfolio .heading {
-		font-size: 180%;
-		text-align: center;
-	}
-
-	#portfolio .overlay {
-		min-height: auto;
-		padding: 20px;
-	}
-
-	#portfolio .description {
-		top: 100px;
-		position: static;
-	}
-
-	#portfolio section {
-		min-height: auto;
-	}
-
-	/* #portfolio section:hover .overlay .heading {
-	 top: -0px;
-	 color: white;
-	} */
-
-	#portfolio .heading span {
-		display: none;
-	}
-
-	#portfolio .overlay > * {
-		font-size: 200%;
-	}
-
-	#portfolio p, h6 {
-		text-align: left;
-	}
-
-	#contact textarea {
-		width: 90%;
-	}
-  #contact .contactMe {
-    max-width: 480px;
-  }
-
-  #contact .inputBox span {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 570px) {
-
-	#home nav {
-		width: inherit;
-	}
-	
-	#about .signature {
-		float: none;
-	}
-
-	#portfolio h2 {
-		margin-bottom: 0;
-	}
-
-	#portfolio section img {
-		display: none;
-	}
-
-	#portfolio section {
-		width: 100%;
-	}
-
-	#portfolio .description > *  {
-		display: block;
-	}
-
-	#portfolio .description {
-		display: table-footer-group;
-	}
-
-	#portfolio .heading {
-		font-size: 180%;
-		text-align: center;
-	}
-
-	#portfolio .overlay {
-		min-height: auto;
-		padding: 20px;
-	}
-
-	#portfolio .description {
-		top: 0px;
-		position: relative;
-	}
-
-	#portfolio section {
-		min-height: auto;
-	}
-
-	/* #portfolio section:hover .overlay .heading {
-	 top: -0px;
-	 color: white;
-	} */
-
-	#portfolio .heading span {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 480px), screen and (max-width: 570px), screen and (max-width: 790px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
   body {
     margin: 0;
@@ -1348,6 +1100,14 @@ h6 {
     background-image: url(../images/background\ 3.png);
     width: 100%;
   }
+
+  #skill-set ul {
+    grid-template-columns: repeat(5, max-content);
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 520px) {
 
   #home {
     width: 100%;
@@ -1411,12 +1171,6 @@ h6 {
   }
 
   #about .info nav {
-    /* font-size: 70%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    grid-template-rows: repeat(2, max-content);
-    gap: 2.5rem 0rem; */
     justify-content:center;
     align-items: center;
     text-align: center;
@@ -1457,10 +1211,10 @@ h6 {
     font-size: 130%;
   }
 
-  #skill-set ul {
-    grid-template-columns: repeat(3, max-content);
+  /* #skill-set ul {
+    grid-template-columns: repeat(5, max-content);
     overflow: hidden;
-  }
+  } */
 
 	#skill-set #web-development-skills {
     font-size: 100%;
@@ -1479,127 +1233,21 @@ h6 {
   #portfolio {
     margin: 0;
     padding: 0;
+    transform: scale(0.95);
+    overflow-x: hidden;
   }
 
-  #portfolio h2 {
-    margin: 100px 10px 0 10px;
-    font-size: 200%;
-  }
-
-  #portfolio .description h4 {
-    text-align: center;
-  }
-
-  #portfolio .listDescription {
-    text-align: left;
-  }
-
-  #portfolio #overlay-heading {
-    display: none;
+  #portfolio .overlay {
+    transform: scale(0.85);
   }
 
   #portfolio img {
     display: none;
   }
 
-	#portfolio .overlay {
-		height: 70%;
-    overflow-x: hidden;
-	}
-
-  /* @media (hover: hover) { */
-    #portfolio section .overlay img {
-      display: none;
-      opacity: 0;
-      transition: none;
-    }
-    
-    #portfolio section .description {
-      top: 0px;
-      transition: none;
-    }
-    
-    #portfolio section .overlay .heading span {
-      /* -webkit-transform: rotate(180deg); */
-      position: relative;
-      top: 0px;
-      left: -30px;
-      color: rgba(4,14,22,.83);
-    }
-    
-    #portfolio section .overlay .description > * {
-      display: block;
-      transition: none;
-    }
-    
-    #portfolio section .overlay .heading {
-      top: 0px;
-      margin-bottom: 5px;
-      transition: none;
-    }
-    /* } */
-
-    @media (hover: hover) {
-      .description .links li:hover {
-        cursor: pointer;
-        background-color: #2b99ff;
-      }
-
-      .description .horizontal-list li:hover:last-child {
-        cursor: pointer;
-        background-color: #2b99ff;
-      }
-
-      .description input:hover {
-        cursor: pointer;
-        background-color: #2b99ff;
-      }
-
-      #portfolio section:hover .overlay img {
-        display: none;
-        opacity: 0;
-        transition: opacity .32s;
-      }
-      
-      #portfolio section:hover .description {
-        top: 40px;
-        transition: top .5s;
-      }
-      
-      #portfolio section:hover .overlay .heading span {
-        /* -webkit-transform: rotate(180deg); */
-        position: relative;
-        top: -80px;
-        left: -30px;
-        color: rgba(4,14,22,.83);
-      }
-      
-      #portfolio section:hover .overlay .description > * {
-        display: block;
-      }
-      
-      #portfolio section:hover .overlay .heading {
-        position: absolute;
-        top: -60px;
-        transition: top .9s;
-      }
-      }
-
-.contactMe {
-    margin: 75px 0 0 0;
-  }
-}
-
-#contact .h3 {
-  font-size: 130%;
-}
-
-.inputBox {
-  margin: 0;
-}
-
-.info img {
-  max-width: 150px;
+  /* .contactMe {
+    margin-bottom: 100px;
+  } */
 }
 
 /* End of Media section */
