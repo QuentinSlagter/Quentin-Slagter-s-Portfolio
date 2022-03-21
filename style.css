@@ -955,7 +955,7 @@ h6 {
   }
 
   #skill-set ul {
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(5, max-content);
     overflow: hidden;
   }
 
@@ -1116,6 +1116,10 @@ h6 {
     font-size: 11px;
   }
 
+  #home nav {
+    width: 100%;
+  }
+
   .dropdown {
     display: none;
   }
@@ -1148,6 +1152,10 @@ h6 {
     width: 100%;
   }
 
+  #about .little-about-me {
+    max-width: 490px;
+  }
+
   #about .signature {
     font-size: 85%;
   }
@@ -1165,6 +1173,7 @@ h6 {
     width: 100%;
     margin-left: 0;
     line-height: 170%;
+    /* transform: scale(0.75); */
   }
 
   #about .info {
@@ -1196,6 +1205,10 @@ h6 {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-start: 3;
+  }
+
+  #about .about-me-picture {
+    display: none;
   }
 
 	#about img {
@@ -1232,8 +1245,8 @@ h6 {
 	}
 
   #portfolio {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transform: scale(0.95);
     overflow-x: hidden;
   }
@@ -1251,4 +1264,82 @@ h6 {
   } */
 }
 
+@media screen and (max-width: 460px) {
+
+  #about {
+    transform: scale(0.75);
+  }
+
+  #about .bigContainer {
+    margin-top: 20px;
+  }
+
+  #about .little-about-me {
+    max-width: 325px;
+  }
+
+  #skill-set ul {
+    grid-template-columns: repeat(3, max-content);
+    overflow: hidden;
+  }
+
+  #portfolio {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #about .little-about-me {
+    max-width: 275px;
+  }
+
+  #about h2 {
+    font-size: 200%;
+  }
+
+  #about nav {
+    grid-template-columns: repeat(1, max-content);
+    max-height: auto;
+    margin-top: 20px;
+    column-gap: 0px;
+  }
+
+  .hireMe {
+    grid-column: 2;
+    grid-column-end: 3;
+    grid-row: inherit;
+  }
+  
+  .resume {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: inherit;
+  }
+  
+  .cv {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: inherit;
+  }
+
+  #skill-set ul {
+    grid-template-columns: repeat(2, max-content);
+    overflow: hidden;
+  }
+
+  #portfolio {
+    margin-top: -200px;
+  }
+
+  #portfolio h2 {
+    font-size: 175%;
+  }
+
+  #portfolio .bigContainer2 {
+    width: 325px;
+    transform: scale(0.75);
+    margin-top: -275px;
+    margin-bottom: -275px;
+  }
+}
 /* End of Media section */
